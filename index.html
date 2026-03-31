@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explainers — Complex Topics Made Simple</title>
+  <meta name="description" content="Plain-English explainers for complex topics. Dense documents, regulations, and technical subjects — broken down with interactive tools for the common person.">
+  <meta name="keywords" content="explainers, plain English, interactive guides, Income Tax Act 2025, simplified explanations, visual explainers">
+  <meta name="author" content="Explainers">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://livingston.github.io/explainers/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Explainers — Complex Topics Made Simple">
+  <meta property="og:description" content="Plain-English explainers for complex topics — with interactive tools, visual comparisons, and clear action items.">
+  <meta property="og:url" content="https://livingston.github.io/explainers/">
+  <meta property="og:site_name" content="Explainers">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://livingston.github.io/explainers/assets/images/og-default.png?v=20260330">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Explainers — Complex Topics Made Simple">
+  <meta name="twitter:description" content="Plain-English explainers for complex topics — with interactive tools, visual comparisons, and clear action items.">
+  <meta name="twitter:image" content="https://livingston.github.io/explainers/assets/images/og-default.png?v=20260330">
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Explainers",
+    "url": "https://livingston.github.io/explainers/",
+    "description": "Plain-English explainers for complex topics — with interactive tools, visual comparisons, and clear action items.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://livingston.github.io/explainers/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .landing-hero {
+      padding: 6rem 0 4rem;
+      text-align: center;
+      background: linear-gradient(180deg, var(--c-accent-light) 0%, var(--c-bg) 100%);
+    }
+    .landing-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--c-accent);
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: 9999px;
+      padding: 4px 14px;
+      margin-bottom: 1.5rem;
+    }
+    .landing-hero__badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--c-success);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .landing-hero__title {
+      font-family: var(--f-serif);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--c-text);
+    }
+    .landing-hero__subtitle {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--c-text-secondary);
+      max-width: 560px;
+      margin: 1.5rem auto 0;
+      line-height: 1.7;
+    }
+    .landing-hero__cta {
+      margin-top: 2.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 2rem;
+      background: var(--c-accent);
+      color: var(--c-on-accent);
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .landing-hero__cta:hover {
+      background: var(--c-accent-dark);
+      color: var(--c-on-accent);
+      transform: translateY(-1px);
+    }
+    .landing-section-title {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .landing-section-subtitle {
+      text-align: center;
+      color: var(--c-text-secondary);
+      max-width: 500px;
+      margin: 0 auto var(--sp-xl);
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--sp-xl);
+      margin: var(--sp-2xl) 0;
+    }
+    .feature {
+      text-align: center;
+      padding: var(--sp-xl);
+    }
+    .feature__icon {
+      font-size: 2rem;
+      margin-bottom: var(--sp-sm);
+    }
+    .feature__title {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .feature__desc {
+      font-size: 0.88rem;
+      color: var(--c-text-secondary);
+      margin-top: var(--sp-xs);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-nav">Skip to content</a>
+
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container container--wide navbar__inner">
+      <a href="./" class="navbar__brand"><img src="assets/images/logo.svg" alt="" width="24" height="24" class="navbar__logo"> Explainers</a>
+      <ul class="navbar__links">
+        <li><a href="#explainers">Browse</a></li>
+        <li><a href="https://github.com/livingston/explainers" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="landing-hero">
+      <div class="container">
+        <div class="landing-hero__badge">Open Source</div>
+        <h1 class="landing-hero__title">Complex Topics,<br>Made Simple</h1>
+        <p class="landing-hero__subtitle">
+          We read dense, 600-page documents so you don't have to. Every explainer breaks down complex topics into plain English with interactive tools, visual comparisons, and clear action items.
+        </p>
+        <a href="#explainers" class="landing-hero__cta">Browse Explainers &darr;</a>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+      <div class="container">
+        <div class="features">
+          <div class="feature">
+            <div class="feature__icon">&#128214;</div>
+            <div class="feature__title">Plain English</div>
+            <div class="feature__desc">No jargon. Every section explained like you're talking to a friend who happens to be an expert on the subject.</div>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">&#128202;</div>
+            <div class="feature__title">Visual Comparisons</div>
+            <div class="feature__desc">Interactive charts, side-by-side tables, and flowcharts that make complex structures intuitive.</div>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">&#128221;</div>
+            <div class="feature__title">Action Items</div>
+            <div class="feature__desc">Every explainer ends with a concrete checklist — what you need to do based on your situation.</div>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">&#9889;</div>
+            <div class="feature__title">Interactive Tools</div>
+            <div class="feature__desc">Calculators, comparisons, and decision helpers built right into the page.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explainers List -->
+    <section class="section" id="explainers">
+      <div class="container">
+        <h2 class="landing-section-title">Explainers</h2>
+        <p class="landing-section-subtitle">Dive into any of the explainers below. Each one covers a single topic exhaustively.</p>
+
+        <div class="explainer-grid">
+          <!-- Income Tax Act 2025 -->
+          <a href="income-tax-act-2025/" class="explainer-card">
+            <div class="explainer-card__banner" style="background: linear-gradient(135deg, var(--c-india-saffron) 0%, var(--c-accent) 50%, var(--c-india-green) 100%);">
+              <span class="explainer-card__banner-icon">&#9878;</span>
+            </div>
+            <div class="explainer-card__body">
+              <div class="explainer-card__tags">
+                <span class="badge badge--new">New</span>
+                <span class="tag">Finance</span>
+                <span class="tag">Tax</span>
+              </div>
+              <div class="explainer-card__title">Income Tax Act, 2025</div>
+              <div class="explainer-card__desc">
+                India's new income tax law replacing the 63-year-old 1961 Act. Covers all 536 sections — tax slabs, deductions, capital gains, TDS, filing deadlines, and an interactive tax calculator.
+              </div>
+              <div class="explainer-card__meta">
+                <span>Act No. 30 of 2025</span>
+                <span>&middot;</span>
+                <span>Effective 1 Apr 2026</span>
+                <span>&middot;</span>
+                <span>20 min read</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Placeholder for future explainers -->
+          <div class="explainer-card explainer-card--disabled">
+            <div class="explainer-card__banner">
+              <span class="explainer-card__banner-icon">+</span>
+            </div>
+            <div class="explainer-card__body">
+              <div class="explainer-card__tags">
+                <span class="badge badge--default">Coming Soon</span>
+              </div>
+              <div class="explainer-card__title">More explainers on the way</div>
+              <div class="explainer-card__desc">
+                Have a dense document or complex topic you'd like broken down? We're always looking for the next thing to explain.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Explainers</strong> is an open-source project that makes complex topics readable for everyone.</p>
+      <p>These explainers are for informational purposes only and do not constitute professional advice.</p>
+      <p>&copy; 2026 Explainers</p>
+    </div>
+  </footer>
+</body>
+</html>

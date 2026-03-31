@@ -1,0 +1,6 @@
+# Working files (not part of the site)
+*.pdf
+extract_pdf.py
+pdf_extracts/
+reference/
+_extracted/
